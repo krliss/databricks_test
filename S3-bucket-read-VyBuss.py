@@ -73,7 +73,7 @@ display(df)
 # Allow creating table using non-emply location
 spark.conf.set("spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation","true")
 # Save table
-df.write.format("parquet").saveAsTable('crypto_train')
+df.write.format("parquet").saveAsTable('vybuss_data')
 
 # COMMAND ----------
 
@@ -88,11 +88,6 @@ display(dbutils.fs.ls("/mnt/knowit-cocreate-training/demo_example"))
 
 # Unmount S3 bucket
 dbutils.fs.unmount("/mnt/knowit-cocreate-training/")
-
-# COMMAND ----------
-
-dbutils.fs.ls("s3://knowit-cocreate-training/vybuss/")
-
 
 # COMMAND ----------
 
