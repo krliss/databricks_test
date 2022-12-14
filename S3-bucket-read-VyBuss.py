@@ -1,6 +1,7 @@
 # Databricks notebook source
 # Check the contents in tables 
-dbutils.fs.ls("/FileStore/tables")
+# dbfs:/user/hive/warehouse/new_user_credentials/
+dbutils.fs.ls("/FileStore/tables/")
 
 # COMMAND ----------
 
@@ -88,6 +89,10 @@ display(dbutils.fs.ls("/mnt/knowit-cocreate-training/demo_example"))
 
 # Unmount S3 bucket
 dbutils.fs.unmount("/mnt/knowit-cocreate-training/")
+
+# COMMAND ----------
+
+dbutils.fs.ls("/mnt/knowit-cocreate-training/demo_example/")
 
 # COMMAND ----------
 
